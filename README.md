@@ -1,20 +1,20 @@
 [![New Relic Experimental header](https://github.com/newrelic/opensource-website/raw/master/src/images/categories/Experimental.png)](https://opensource.newrelic.com/oss-category/#new-relic-experimental)
 
 # CronSynth - Cron-like jobs in New Relic Synthetics
-![GitHub forks](https://img.shields.io/github/forks/newrelic-experimental/newrelic-experimental-FIT-template?style=social)
-![GitHub stars](https://img.shields.io/github/stars/newrelic-experimental/newrelic-experimental-FIT-template?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/newrelic-experimental/newrelic-experimental-FIT-template?style=social)
+![GitHub forks](https://img.shields.io/github/forks/newrelic-experimental/nr-cron-synth?style=social)
+![GitHub stars](https://img.shields.io/github/stars/newrelic-experimental/nr-cron-synth?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/newrelic-experimental/nr-cron-synth?style=social)
 
-![GitHub all releases](https://img.shields.io/github/downloads/newrelic-experimental/newrelic-experimental-FIT-template/total)
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/newrelic-experimental/newrelic-experimental-FIT-template)
-![GitHub last commit](https://img.shields.io/github/last-commit/newrelic-experimental/newrelic-experimental-FIT-template)
-![GitHub Release Date](https://img.shields.io/github/release-date/newrelic-experimental/newrelic-experimental-FIT-template)
+![GitHub all releases](https://img.shields.io/github/downloads/newrelic-experimental/nr-cron-synth/total)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/newrelic-experimental/nr-cron-synth)
+![GitHub last commit](https://img.shields.io/github/last-commit/newrelic-experimental/nr-cron-synth)
+![GitHub Release Date](https://img.shields.io/github/release-date/newrelic-experimental/nr-cron-synth)
 
 
-![GitHub issues](https://img.shields.io/github/issues/newrelic-experimental/newrelic-experimental-FIT-template)
-![GitHub issues closed](https://img.shields.io/github/issues-closed/newrelic-experimental/newrelic-experimental-FIT-template)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/newrelic-experimental/newrelic-experimental-FIT-template)
-![GitHub pull requests closed](https://img.shields.io/github/issues-pr-closed/newrelic-experimental/newrelic-experimental-FIT-template)
+![GitHub issues](https://img.shields.io/github/issues/newrelic-experimental/nr-cron-synth)
+![GitHub issues closed](https://img.shields.io/github/issues-closed/newrelic-experimental/nr-cron-synth)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/newrelic-experimental/nr-cron-synth)
+![GitHub pull requests closed](https://img.shields.io/github/issues-pr-closed/newrelic-experimental/nr-cron-synth)
 
 
 This project provides a easy to use scaffold for running any sort of job (http check, api request, etc) within a New Relic synthetic minon whilst controlling the times job runs using cron-like configuration. You can set jobs to run on a specified month, day of month, day of week, hour, min or any combination.
