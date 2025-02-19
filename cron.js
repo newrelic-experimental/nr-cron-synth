@@ -42,7 +42,7 @@ const JOBS = [
 You shouldnt need to configure anything below here!
 */
 
-const CRON_SYNTH_VERSION="1.0.0" 
+const CRON_SYNTH_VERSION="1.0.1" 
 const DEFAULT_TIMEOUT = 10000 //timeout on http requests
 let RUNNING_LOCALLY=false
 
@@ -93,6 +93,15 @@ async function asyncForEach(array, callback) {
     }
   }
   
+/*
+* isObject()
+*
+* A handy check for if a var is an object
+*/
+function isObject(val) {
+    if (val === null) { return false;}
+    return ( (typeof val === 'function') || (typeof val === 'object') );
+}
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -154,11 +163,10 @@ const sendDataToNewRelic = async (data) =>  {
     let request = {
         url: METRIC_API_URL,
         method: 'POST',
-        json: true,
         headers :{
             "Api-Key": INSERT_KEY
         },
-        body: data
+        body: JSON.stringify(data)
     }
     console.log("\nSending data to NR metrics API...")
     return genericServiceCall([200,202],request,(body,response,error)=>{
@@ -196,7 +204,12 @@ const checkRecentRun = async (timeBlock) => {
     let body =  await genericServiceCall([200],options,(body)=>{return body})
 
     try {
-        bodyJSON = JSON.parse(body)
+        let bodyJSON
+        if(isObject(body)) {
+            bodyJSON = body
+        } else {
+            bodyJSON = JSON.parse(body)
+        }  
         let recentRuns=bodyJSON.data.actor.account.nrql.results[0].count
         if(!recentRuns) {
             console.log(`Recent run for this timeblock (${timeBlock}) not detected`)
